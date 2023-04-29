@@ -1,5 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem;
 }
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+li:hover,
+p:hover {
+  text-decoration: underline;
+}
+
+nav {
+  background: url('./img/stars.jpg');
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  color: white;
+}
+
+nav div {
+  display: flex;
+  padding: 0 3rem;
+}
+
+nav div li {
+  padding: 0 2rem;
+}
+
+.moonNav ul {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
