@@ -22,7 +22,7 @@ import plutoTexture from './img/pluto.jpg';
 
 const renderer = new THREE.WebGLRenderer();
 
-const width = window.innerWidth;
+const width = window.innerWidth -17;
 const height = window.innerHeight;
 
 renderer.setSize(width, height);
