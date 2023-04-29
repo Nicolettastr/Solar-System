@@ -23,6 +23,12 @@ p:hover {
   text-decoration: underline;
 }
 
+li:hover {
+
+  background: linear-gradient(109.6deg, rgb(9, 9, 121) 11.2%, rgb(144, 6, 161) 53.7%, rgb(0, 212, 255) 100.2%);
+  border-radius: 0.3rem;
+}
+
 nav {
   background: url('./img/stars.jpg');
 }

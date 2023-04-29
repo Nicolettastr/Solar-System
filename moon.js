@@ -56,6 +56,8 @@ const moon = new THREE.Mesh(moonGeometry, moonMaterial);
 scene.add(moon);
 
 const animate = () => {
+
+    moon.rotateY(0.004)
     renderer.render(scene, camera);
   };
 
