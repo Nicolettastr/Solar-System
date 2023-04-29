@@ -12,14 +12,14 @@ import moonTexture from './img/moon.jpg';
 const moonDiv = document.getElementById('moonDiv')
 const renderer = new THREE.WebGLRenderer();
 
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(window.innerWidth / 2, window.innerHeight);
 
 document.body.appendChild(renderer.domElement);
 
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(
-  45, window.innerWidth / window.innerHeight, 0.1, 1000
+  45, window.innerWidth / 2 / window.innerHeight, 0.1, 1000
 );
 
 const orbit = new OrbitControls(camera, renderer.domElement);
@@ -64,5 +64,5 @@ const animate = () => {
   window.addEventListener('resize', function() {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth / window.innerHeight);
+    renderer.setSize(window.innerWidth / 2 / window.innerHeight);
   })

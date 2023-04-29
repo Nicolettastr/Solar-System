@@ -7,7 +7,24 @@
     <title>Solar System</title>
   </head>
   <body class="moonBody">
-    <div id="moonDiv"></div>
+    <nav>
+        <ul>
+          <p>Solar System</p>
+          <div>
+            <Li> <a href="./contactMe.html">Contact Me</a> </Li>
+            <li>About</li>
+          </div>
+        </ul>
+      </nav>
+    <div id="moonDiv">
+        <form action="mailto:nicolettastruggia@hotmail.com">
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <textarea name="message" cols="20" rows="10"
+            placeholder="Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
     <script type="module" src="/moon.js"></script>
   </body>
 </html>
