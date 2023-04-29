@@ -24,9 +24,9 @@ p:hover {
 }
 
 li:hover {
-
   background: linear-gradient(109.6deg, rgb(9, 9, 121) 11.2%, rgb(144, 6, 161) 53.7%, rgb(0, 212, 255) 100.2%);
   border-radius: 0.3rem;
+  width: fit-content;
 }
 
 nav {
@@ -96,4 +96,37 @@ button {
 
 button:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 600px){
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav div {
+    padding: 0;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav div li {
+    margin-left: 0.2rem;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  #moonDiv {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .moonBody {
+    display: flex;
+    flex-direction: column;
+  }
+
+  
 }

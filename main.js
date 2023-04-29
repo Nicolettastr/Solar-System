@@ -18,11 +18,12 @@ import uranusRingTexture from './img/uranusRing.png';
 import neptuneTexture from './img/neptune.jpg';
 import plutoTexture from './img/pluto.jpg';
 
-//! create renderer, scene and camera
+window.onload = function() {
+  //! create renderer, scene and camera
 
 const renderer = new THREE.WebGLRenderer();
 
-const width = window.innerWidth -17;
+const width = window.innerWidth;
 const height = window.innerHeight;
 
 renderer.setSize(width, height);
@@ -165,7 +166,8 @@ renderer.setAnimationLoop(animate);
 window.addEventListener('resize', function() {
   camera.aspect = width / height;
   camera.updateProjectionMatrix();
-  renderer.setSize(width / height);
+  renderer.setSize(width, height);
 })
 
+}
 

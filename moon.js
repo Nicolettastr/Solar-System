@@ -7,19 +7,33 @@ import './style.css'
 import starsTexture from './img/stars.jpg';
 import moonTexture from './img/moon.jpg';
 
-//! create renderer, scene and camera
+window.onload = function() {
+  //! create renderer, scene and camera
 
-const moonDiv = document.getElementById('moonDiv')
 const renderer = new THREE.WebGLRenderer();
+const moon_section = document.getElementById('moonSection')
 
-renderer.setSize(window.innerWidth / 2, window.innerHeight);
+let width;
+let height;
 
-document.body.appendChild(renderer.domElement);
+if(window.innerWidth < 600) {
+  width = window.innerWidth
+  height = window.innerHeight - 300
+  moon_section.appendChild(renderer.domElement);
+}else {
+  width = window.innerWidth / 2
+  height = window.innerHeight
+  document.body.appendChild(renderer.domElement)
+}
+
+renderer.setSize(width, height);
+
+
 
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(
-  45, window.innerWidth / 2 / window.innerHeight, 0.1, 1000
+  45, width / height, 0.1, 1000
 );
 
 const orbit = new OrbitControls(camera, renderer.domElement);
@@ -66,5 +80,6 @@ const animate = () => {
   window.addEventListener('resize', function() {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth / 2 / window.innerHeight);
-  })
+    renderer.setSize(width, height);
+  });
+}
