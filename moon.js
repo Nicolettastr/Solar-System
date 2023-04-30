@@ -10,8 +10,7 @@ import moonTexture from './img/moon.jpg';
 window.onload = function() {
   //! create renderer, scene and camera
 
-const renderer = new THREE.WebGLRenderer();
-const moon_section = document.getElementById('moonSection')
+const renderer = new THREE.WebGLRenderer({ antialias: true });
 
 let width;
 let height;
@@ -21,13 +20,14 @@ if(window.innerWidth < 600) {
   height = window.innerHeight - 300
   moon_section.appendChild(renderer.domElement);
 }else {
-  width = window.innerWidth / 2
+  width = window.innerWidth / 2 
   height = window.innerHeight
   document.body.appendChild(renderer.domElement)
 }
 
 renderer.setSize(width, height);
 
+const moon_section = document.getElementById('moonSection')
 
 
 const scene = new THREE.Scene();

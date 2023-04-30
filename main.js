@@ -18,22 +18,20 @@ import uranusRingTexture from './img/uranusRing.png';
 import neptuneTexture from './img/neptune.jpg';
 import plutoTexture from './img/pluto.jpg';
 
+
 window.onload = function() {
   //! create renderer, scene and camera
 
-const renderer = new THREE.WebGLRenderer();
+const renderer = new THREE.WebGLRenderer({ antialias: true });
 
-const width = window.innerWidth;
-const height = window.innerHeight;
-
-renderer.setSize(width, height);
+renderer.setSize(window.innerWidth, window.innerHeight);
 
 document.body.appendChild(renderer.domElement);
 
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(
-  45, width / height, 0.1, 1000
+  45, window.innerWidth / window.innerHeight, 0.1, 1000
 );
 
 const orbit = new OrbitControls(camera, renderer.domElement);
@@ -164,9 +162,9 @@ const animate = () => {
 renderer.setAnimationLoop(animate);
 
 window.addEventListener('resize', function() {
-  camera.aspect = width / height;
+  camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
-  renderer.setSize(width, height);
+  renderer.setSize(window.innerWidth, window.innerHeight);
 })
 
 }
