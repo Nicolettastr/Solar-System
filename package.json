@@ -13,5 +13,17 @@
   },
   "dependencies": {
     "three": "^0.152.1"
-  }
+  },
+  "description": "parcel index.html",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nicolettastr/Solar-System.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nicolettastr/Solar-System/issues"
+  },
+  "homepage": "https://github.com/Nicolettastr/Solar-System#readme"
 }
